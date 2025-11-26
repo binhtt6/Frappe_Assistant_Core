@@ -432,7 +432,7 @@ def raise_unauthorized(message):
             f'Bearer realm="Frappe Assistant Core", '
             f'error="invalid_token", '
             f'error_description="{message}", '
-            f'resource_metadata="{get_server_url()}/.well-known/oauth-protected-resource"'
+            f'resource_metadata="{frappe.utils.get_url()}/.well-known/oauth-protected-resource"'
         )
     }
     frappe.throw(message, exc=frappe.AuthenticationError)
