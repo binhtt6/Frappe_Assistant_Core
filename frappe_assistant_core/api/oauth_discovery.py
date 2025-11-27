@@ -34,7 +34,7 @@ def openid_configuration():
 
     Extends Frappe's built-in endpoint with MCP-required fields.
     """
-    from frappe.integrations.oauth2 import get_openid_configuration as frappe_openid_config
+    from frappe.integrations.oauth2 import openid_configuration as frappe_openid_config
 
     from frappe_assistant_core.utils.oauth_compat import get_oauth_settings
 
